@@ -1,0 +1,26 @@
+aside {
+    width: 40%;
+    float: right;
+    font-style: italic;
+    color: #29627e;
+  }
+  
+
+  blockquote {
+    margin: 0;
+  }
+  
+  blockquote p {
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+  }
+  
+  blockquote p::before {
+    content: '\201C';
+  }
+  
+  blockquote p::after {
+    content: '\201D';
+  }
+  
