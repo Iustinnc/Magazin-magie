@@ -8,6 +8,8 @@
 <meta name="author" content="Iustin-Alexandru Oancea">
 
 <link href="Resurse/stil.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-......" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 <link rel="apple-touch-icon" sizes="180x180" href="Resurse/ico/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="Resurse/ico/favicon-32x32.png">
@@ -26,14 +28,24 @@
   <div class="container">
     <div class="Header">
       <header>
-        <a href="index.html">Acasa</a>
-        <a href="Resurse/Pagini/produse.html">Produse</a>
-        <a href="Resurse/Pagini/noutati.html">Noutati</a>
-        <a href="Resurse/Pagini/cursuriMagie.html">Cursuri de Magie</a>
-    
-        <h1>Magazinul MagicMo</h1>
-    </header>
-    </div>
+        <nav>
+          <ul class="menu">
+              <li><a href="index.html"><i class="fa fa-home"></i> Acasă</a></li>
+              <li>
+                  <a href="#">Produse</a>
+                  <ul class="submenu">
+                      <li><a href="Resurse/Pagini/produse.html#section1">Pachete de carti</a></li>
+                      <li><a href="Resurse/Pagini/produse.html#section2">Trucuri de magie Clasice</a></li>
+                      <li><a href="Resurse/Pagini/produse.html#section3">Accesorii</a></li>
+                  </ul>
+              </li>
+              <li><a href="Resurse/Pagini/noutati.html">Noutăți</a></li>
+              <li><a href="Resurse/Pagini/cursuriMagie.html">Cursuri de Magie</a></li>
+          </ul>
+      </nav>
+          <h1>Magazinul MagicMo</h1>
+      </header>
+  </div>
     <div class="div1">
       <main>
         
@@ -46,7 +58,8 @@
           </aside>
           
         </section>
-
+    </div>
+    <div class="div8">
         <section>
             <h3>Ce este magia?</h3>
             
@@ -60,12 +73,17 @@
                     întreaga lume, inclusiv în Egiptul Antic, Grădinile Babilonului și în practicile paganilor 
                     europeni.
                 </p>
-            </aside>
-    
-            
-    
+              </aside>
             
         </section>
+
+        <div class="iframe-container">
+          <div class="iframe-links">
+            <a href="https://www.youtube.com/embed/V4a1grzNUu4?si=VMSBkr8DF9NkebGs" target="iframe-content" class="iframe-link">Magazin Magie</a>
+            <a href="https://www.youtube.com/embed/ITU5Dd7zhbE?si=kgXkLXMA_g69DHXW" target="iframe-content" class="iframe-link">Truc Iumor</a>
+          </div>
+          <iframe name="iframe-content" class="iframe-content" src=""></iframe>
+        </div>
     
         <br>
         <br>
@@ -74,43 +92,170 @@
         <blockquote>
             <p>What the eyes see and the ears hear, the mind believes.</p>
             <footer>—Harry Houdini</footer>
-          </blockquote>
+        </blockquote>
     
+        <br>
         <section>
             <h3>Cel mai vechi truc din lume</h3>
     
             <p>Cel mai vechi truc din lume a apărut în Egypt în anul 2700 î.Hr. și este de fapt o modalitate<br>
                 de a trișa la jocul ”Alba Neagra”.</p>
-    
-            <video width="320" height="240" controls>
-                <source src="Resurse/AM _PIERDUT_ LA ALBA_NEAGRA_ÎN_LONDRA.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-    
-            
         </section>
+
+      </div>
+
+      <div class="div3">
+        <div class="calendar-placeholder">
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="event-list">
+                <p><strong>June 20:</strong> Potion Making Workshop</p>
+                <p><strong>June 25:</strong> Wand Crafting Seminar</p>
+                <p><strong>June 30:</strong> Magic Show</p>
+                <p><strong>July 5:</strong> Fortune Telling Session</p>
+                <p><strong>July 10:</strong> Spell Casting Class</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="div2">
+        <div class="table-container">
+          <table>
+            <caption>Oferte Speciale de MagicMo</caption>
+            <thead>
+              <tr>
+                <th>Produs</th>
+                <th>Descriere</th>
+                <th>Preț Normal</th>
+                <th>Preț Redus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carduri Bicycle</td>
+                <td>Carduri de calitate superioară pentru trucuri magice</td>
+                <td>50 RON</td>
+                <td rowspan="2">45 RON</td>
+              </tr>
+              <tr>
+                <td>Carduri Phoenix</td>
+                <td>Carduri profesionale pentru magicieni</td>
+                <td>60 RON</td>
+              </tr>
+              <tr>
+                <td>Cutie Magică</td>
+                <td>Set complet pentru începători</td>
+                <td>100 RON</td>
+                <td>85 RON</td>
+              </tr>
+              <tr>
+                <td>Truc de Levitatie</td>
+                <td>Accesorii pentru trucuri de levitatie</td>
+                <td>70 RON</td>
+                <td>60 RON</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">Ofertele sunt valabile până la sfârșitul lunii!</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <div class="div4">
+        <div class="announcement-placeholder">
+            <h2>Anunțuri</h2>
+            <p><strong>Noi Sosiri:</strong> Verificați cea mai nouă colecție de artefacte încântate!</p>
+            <p><strong>Ofertă Specială:</strong> Cumpărați un produs și primiți unul gratuit la toate baghetele magice doar săptămâna aceasta!</p>
+            <p><strong>Program Magazin:</strong> Acum suntem deschiși până la ora 22:00 în weekenduri.</p>
+            <p><strong>Eveniment Viitor:</strong> Alăturați-vă nouă pentru un spectacol magic special pe 15 iulie.</p>
+            <p><strong>Abonament:</strong> Înscrieți-vă în programul nostru de fidelitate și beneficiați de reduceri exclusive.</p>
+        </div>
+    </div>
+        
+
+        
     
         <!-- Link extern -->
       <a href="https://www.jucariesimagie.ro/produse-noi" rel="noopener noreferrer">Link către Jucarie și Magie</a>
-    
-      <!-- Link către începutul paginii în footer -->
-      <footer>
-        <a href="#top">Începutul paginii</a>
-        <!-- ... (alte elemente din footer) ... -->
-      </footer>
+
+      
     
       <!-- Linkuri cu iframe -->
       <a href="https://www.youtube.com/watch?v=V4a1grzNUu4" target="iframe1">Videoclip 1</a>
     
     </main>
     </div>
-    <div class="div8"></div>
-    <div class="div3"></div>
-    <div class="div2"></div>
-    <div class="div4"></div>
-    <div class="div5"></div>
-    <div class="div6"></div>
-    <div class="div7"></div>
+    
     <div class="footer">
       <footer>
         <!-- Informații de contact -->

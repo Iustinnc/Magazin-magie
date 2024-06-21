@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @media print {
   /* Bannerul în susul primei pagini */
   body:before {
@@ -11,6 +10,7 @@
     padding: 5px;
     margin-top: 20px;
   }
+
   /* Ascunde imaginile, videoclipurile, iframe-urile și elementele dependente */
   img,
   video,
@@ -22,41 +22,50 @@
   aside {
     display: none !important;
   }
+
   /* Ascunde linkul către începutul paginii */
   footer a[href="#top"] {
     display: none !important;
   }
+
   /* Gridul paginii va fi afișat ca block pentru printare */
   .container {
     display: block !important;
   }
+
   /* Linkurile vor fi afișate ca text normal */
   a {
     text-decoration: none !important;
     color: black !important;
   }
+
   /* Headingul de nivel 1 va fi centrat și subliniat */
   .Header h1 {
     text-align: center !important;
     font-size: 2.5em !important;
     text-decoration: underline !important;
   }
+
   /* Ascunde meniul */
   .Header nav {
     display: none !important;
   }
+
   /* Page break după heading */
   .Header {
     page-break-after: always;
   }
+
   /* Page break înaintea footer-ului */
   .footer {
     page-break-before: always;
   }
+
   /* Watermark cu numele tău pe fiecare pagină */
   body {
     position: relative;
   }
+
   body:after {
     content: "Numele Tău";
     position: fixed;
@@ -72,17 +81,20 @@
     transform: rotate(-45deg);
     pointer-events: none;
   }
+
   /* Margine pentru pagini stânga/dreapta în print preview */
   @page {
     size: A4;
     margin-left: 2.5cm;
     margin-right: 0.5cm;
   }
+
   @page :right {
     margin-left: 0.5cm;
     margin-right: 2.5cm;
   }
 }
+
 body {
   --culoare-1: #ED2D05;
   --culoare-2: #ED7F05;
@@ -92,60 +104,50 @@ body {
   --culoare-6: #EF8851;
 }
 
-.container {
+@mixin transition($properties...) {
+  transition: $properties;
+}
+
+.container {  
   display: grid;
   grid-template-columns: 0.5fr 0.6fr 0.6fr 0.5fr;
   grid-template-rows: 0.1fr 0.3fr 0.3fr 0.3fr 0.3fr 0.1fr;
   column-gap: 5px;
   row-gap: 5px;
   grid-auto-flow: row;
-  grid-template-areas: "Header Header Header Header" "div1 div1 div1 div1" "div8 div8 div8 div8" "div3 div2 div2 div4" "div5 div6 div7 div7" "footer footer footer footer";
+  grid-template-areas:
+    "Header Header Header Header"
+    "div1 div1 div1 div1"
+    "div8 div8 div8 div8"
+    "div3 div2 div2 div4"
+    "div5 div6 div7 div7"
+    "footer footer footer footer";
   padding: 10px;
 }
 
-.Header {
-  grid-area: Header;
-}
+.Header { grid-area: Header; }
 
-.div1, .div8, .div3, .div2, .div4, .div5, .div6, .div7 {
+.div1, .div8, .div3, .div2, .div4, .div5, .div6, .div7 { 
   padding: 20px;
 }
 
-.div1 {
-  grid-area: div1;
-}
+.div1 { grid-area: div1; }
 
-.div8 {
-  grid-area: div8;
-}
+.div8 { grid-area: div8; }
 
-.div3 {
-  grid-area: div3;
-}
+.div3 { grid-area: div3; }
 
-.div2 {
-  grid-area: div2;
-}
+.div2 { grid-area: div2; }
 
-.div4 {
-  grid-area: div4;
-}
+.div4 { grid-area: div4; }
 
-.div5 {
-  grid-area: div5;
-}
+.div5 { grid-area: div5; }
 
-.div6 {
-  grid-area: div6;
-}
+.div6 { grid-area: div6; }
 
-.div7 {
-  grid-area: div7;
-}
+.div7 { grid-area: div7; }
 
-.footer {
-  grid-area: footer;
-}
+.footer { grid-area: footer; }
 
 body {
   background-color: var(--culoare-6);
@@ -244,7 +246,7 @@ aside {
   font-style: italic;
   color: #ED2D05;
 }
-
+  
 aside > p {
   margin: 0.5rem;
 }
@@ -252,19 +254,19 @@ aside > p {
 blockquote {
   margin: 0;
 }
-
+  
 blockquote p {
   padding: 15px;
   background: #eee;
   border-radius: 5px;
 }
-
+  
 blockquote p::before {
-  content: "“";
+  content: '\201C';
 }
-
+  
 blockquote p::after {
-  content: "”";
+  content: '\201D';
 }
 
 .img-fluid {
@@ -287,7 +289,7 @@ blockquote p::after {
   border: 3px dashed #000000;
   text-decoration: none;
   font-size: 24px;
-  transition: transform 0.5s, opacity 0.5s;
+  @include transition(transform 0.5s, opacity 0.5s);
   opacity: 0.7;
 }
 
@@ -312,7 +314,7 @@ blockquote p::after {
   border-radius: 5px;
   font-size: 14px;
   opacity: 0;
-  transition: opacity 0.5s;
+  @include transition(opacity 0.5s);
 }
 
 .back-to-top:hover .circle-dot {
@@ -320,7 +322,7 @@ blockquote p::after {
 }
 
 .circle-dot {
-  transition: transform 0.5s;
+  @include transition(transform 0.5s);
 }
 
 .table-container {
@@ -350,7 +352,7 @@ thead {
 
 tbody tr:hover {
   background-color: #f2f2f2;
-  transition: background-color 0.3s;
+  @include transition(background-color 0.3s);
 }
 
 tbody tr:hover td:hover {
@@ -376,7 +378,7 @@ tbody td:nth-child(odd) {
   align-items: flex-start;
   margin-top: 20px;
 }
-
+  
 .iframe-links {
   display: flex;
   flex-direction: column;
@@ -391,7 +393,7 @@ tbody td:nth-child(odd) {
   border-radius: 5px;
   text-decoration: none;
   color: #ed5605;
-  transition: background-color 0.3s, color 0.3s;
+  @include transition(background-color 0.3s, color 0.3s);
 }
 
 .iframe-link:hover {
@@ -468,48 +470,55 @@ nav {
   padding: 0;
   display: flex;
   justify-content: space-around;
-}
-.menu > li {
-  position: relative;
-}
-.menu > li > a {
-  text-decoration: none;
-  color: white;
-  padding: 10px 20px;
-  display: block;
-  transition: background-color 0.3s, color 0.3s;
-}
-.menu > li > a:hover {
-  background-color: var(--culoare-2);
-}
-.menu > li .submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--culoare-3);
-  padding: 0;
-  list-style-type: none;
-  margin: 0;
-  width: 200px;
-}
-.menu > li .submenu li {
-  border-bottom: 1px solid #ddd;
-}
-.menu > li .submenu li a {
-  text-decoration: none;
-  color: white;
-  padding: 10px;
-  display: block;
-  transition: background-color 0.3s, padding-left 0.3s;
-}
-.menu > li .submenu li a:hover {
-  background-color: var(--culoare-4);
-  padding-left: 20px;
-}
-.menu > li:hover .submenu {
-  display: block;
-  animation: scale-in 0.3s forwards;
+
+  > li {
+      position: relative;
+
+      > a {
+          text-decoration: none;
+          color: white;
+          padding: 10px 20px;
+          display: block;
+          transition: background-color 0.3s, color 0.3s;
+
+          &:hover {
+              background-color: var(--culoare-2);
+          }
+      }
+
+      .submenu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: var(--culoare-3);
+          padding: 0;
+          list-style-type: none;
+          margin: 0;
+          width: 200px;
+
+          li {
+              border-bottom: 1px solid #ddd;
+
+              a {
+                  text-decoration: none;
+                  color: white;
+                  padding: 10px;
+                  display: block;
+                  transition: background-color 0.3s, padding-left 0.3s;
+
+                  &:hover {
+                      background-color: var(--culoare-4);
+                      padding-left: 20px;
+                  }
+              }
+          }
+      }
+
+      &:hover .submenu {
+          display: block;
+          animation: scale-in 0.3s forwards;
+      }
+  }
 }
 
-/*# sourceMappingURL=stil.css.map */
